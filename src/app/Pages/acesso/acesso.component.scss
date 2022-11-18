@@ -1,0 +1,21 @@
+// col-sm-6 d-flex justify-content-start
+
+// col-sm-6 d-flex justify-content-end
+
+.row{
+    display: flex;
+    justify-content: space-around;
+}
+
+.banner{
+    display: flex;
+    justify-content: end;
+    float: left;
+    margin-right: -270px;
+}
+
+.login{
+    display: flex;
+    justify-content: start;
+    margin-left: -350px;
+}

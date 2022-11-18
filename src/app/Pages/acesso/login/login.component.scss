@@ -1,0 +1,30 @@
+.card{
+    width: 20rem;
+    box-shadow: 3px 1px 1px 1px rgb(0 0 0 / 20%), 0px 1px 1px 1px rgb(0 0 0 / 14%), 0px 1px 3px 3px rgb(0 0 0 / 12%);
+}
+
+.form-group{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex: auto;
+    min-width: 0;
+}
+
+
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 320px;
+    background: #0095f6;
+}
+
+.card-title {
+    background-image: url("/assets/logo-instagram.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 60px;
+    width: 100%;
+}
