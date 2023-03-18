@@ -1,0 +1,178 @@
+.card1{
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    align-items: center;
+    width: 21rem; 
+    border-radius: 0;
+    border: #d2d2d2 1px solid;
+    padding: 10px 0;
+    margin-bottom: 2px;
+    margin-top: 10px;
+}
+
+.card-title {
+    background-image: url("/assets/logo-instagram.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 60px;
+    width: 100%;
+}
+
+.form-group{
+    width: auto;
+    >input{
+        margin-bottom: 6px;
+        border-radius: 4px;
+        height: 37px;
+        width: 260px;
+        font-size: 0.7rem;
+        background-color: #f7f7f7;
+        color: #8e8e8e;
+    }
+}
+
+form { 
+    width: auto;
+    button{
+        width: 100%;
+        height: 33px;
+        margin-bottom: 5px;
+        border-radius: 8px;
+        background-color: #0095f6;
+        font-size: 0.9rem;
+        border: none;
+        font-weight: 500;
+        text-align: center;
+    }
+    button:hover{
+        background-color: #0284db;
+        cursor: pointer;
+    }
+}
+
+.row .div{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    hr{
+        width: 40%;
+        border: none;
+        border-top:#8e8e8e solid 1px ;
+    }
+    span{
+        padding: 0;
+        color: #8e8e8e;
+        font-size: 0.8rem;
+        font-weight: 400;
+    }
+}
+
+.termoServico{
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7px;
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    color: #8e8e8e;
+    > p > a{
+        color: #0a48a7;
+    }
+}
+
+.card {
+    display: flex;
+    margin-top: -14px;
+    border-radius: 0;
+    .card-text{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.9rem;
+        a{
+            text-decoration: none;
+            color: #0284db;
+            margin-left: 2px;
+            font-weight: 400;
+        }
+        a:active{
+            color: #0284dba6;
+        }
+    }
+}
+
+.appStore{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 320px;
+    font-size: 0.9rem;
+    .stores{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        .googlePlay{
+            margin-right: 4px;
+            .imgGooglePlay{
+                height: 40px;
+            }
+        }
+        .microsoft{
+            margin-left: 4px;
+            .imgMicrosoft{
+                height: 40px;
+            }
+        }
+    }
+}
+
+.facebook{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    span{
+        text-align: center;
+        color: #8e8e8e;
+        font-size: 1.1rem;
+        font-weight: 500;
+        padding: 0;
+        margin-bottom: 10px;
+    }
+
+    svg{
+        width: 15px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        vertical-align: -2px;
+    }
+
+    button{
+        width: 250px;
+        height: 33px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        border-radius: 8px;
+        background-color: #0095f6;
+        font-size: 0.9rem;
+        border: none;
+        font-weight: 500;
+        text-align: center;
+        color: #f7f7f7;
+    }
+    button:hover{
+        background-color: #0284db;
+        cursor: pointer;
+    }
+}

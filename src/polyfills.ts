@@ -41,6 +41,7 @@
  *  (window as any).__Zone_enable_cross_context_check = true;
  *
  */
+    import 'web-animations-js/web-animations.min.js'; 
 
 /***************************************************************************************************
  * Zone JS is required by default for Angular itself.
