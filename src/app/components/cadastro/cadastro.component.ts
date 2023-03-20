@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Usuario } from '../usuario.model';
 
 @Component({
   selector: 'app-cadastro',
@@ -7,9 +9,39 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastroComponent implements OnInit {
 
+  formulario: FormGroup = new FormGroup({
+    'emailCelular': new FormControl(null, [Validators.required, Validators.pattern(/^(\+\d{1,3}\s)?\(?\d{2,3}\)?[\s-]?\d{3,4}[\s-]?\d{3,4}$|^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/), Validators.minLength(10)]),
+    'nome_completo': new FormControl(null, [Validators.required, Validators.minLength(3)]),
+    'nome_usuario': new FormControl(null, [Validators.required, Validators.minLength(5)]),
+    'senha': new FormControl(null, [Validators.required, Validators.minLength(8)]),
+  })
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  cadastrarUser(): void{
+    if (this.formulario?.get('emailCelular')?.valid) {
+      let usuario: Usuario = new Usuario(
+        this.formulario.value.emailCelular,
+        this.formulario.value.nome_completo,
+        this.formulario.value.nome_usuario,
+        this.formulario.value.senha
+      )
+  
+      let emailCelular = this.formulario.value.emailCelular;
+      let isEmail = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(emailCelular);
+      let isCelular = /^(\+\d{1,3}\s)?\(?\d{2,3}\)?[\s-]?\d{3,4}[\s-]?\d{3,4}$/.test(emailCelular);
+    
+      if (isEmail) {
+        console.log('É um email');
+      } else if (isCelular) {
+        console.log('É um celular');
+      } 
+
+      console.log(usuario)
+    }
   }
 
 }
