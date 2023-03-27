@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Usuario } from '../usuario.model';
+import { Auth } from '../../auth.service'
 
 @Component({
   selector: 'app-cadastro',
@@ -16,7 +17,7 @@ export class CadastroComponent implements OnInit {
     'senha': new FormControl(null, [Validators.required, Validators.minLength(8)]),
   })
 
-  constructor() { }
+  constructor( private autenticacao: Auth) { }
 
   ngOnInit(): void {
   }
@@ -35,12 +36,15 @@ export class CadastroComponent implements OnInit {
       let isCelular = /^(\+\d{1,3}\s)?\(?\d{2,3}\)?[\s-]?\d{3,4}[\s-]?\d{3,4}$/.test(emailCelular);
     
       if (isEmail) {
-        console.log('É um email');
+        let email = emailCelular
+        console.log('É um email', email);
       } else if (isCelular) {
-        console.log('É um celular');
-      } 
+        let celular = emailCelular
+        console.log('É um celular', celular);
+      }
 
       console.log(usuario)
+      this.autenticacao.cadastrarUsuario(usuario)
     }
   }
 
