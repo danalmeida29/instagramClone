@@ -1,4 +1,7 @@
+import { Auth } from './../../auth.service';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-login',
@@ -7,9 +10,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  public formulario: FormGroup = new FormGroup({
+    'email': new FormControl(null, Validators.required),
+    'senha': new FormControl(null, Validators.required)
+  })
+
+  constructor( private autenticacao: Auth) { }
 
   ngOnInit(): void {
+  }
+
+  autenticar():void{
+    this.autenticacao.autenticar(
+      this.formulario.value.email,
+      this.formulario.value.senha
+    )
   }
 
 }

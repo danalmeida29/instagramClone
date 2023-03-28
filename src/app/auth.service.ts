@@ -2,15 +2,28 @@ import { Usuario } from "./components/usuario.model";
 import * as firebase from "firebase";
 
 export class Auth { 
-    public cadastrarUsuario(usuario: Usuario): void {
-        console.log("oiii", usuario)
 
-        firebase.auth().createUserWithEmailAndPassword(usuario.emailCelular.toString(), usuario.senha)
+    cadastrarUsuario(usuario: Usuario): Promise<any> {
+  
+       return firebase.auth().createUserWithEmailAndPassword(usuario.email, usuario.senha)
             .then((resposta: any)=> {
-                console.log(resposta)
+
+                delete usuario.senha
+                
+                firebase.database().ref(`usuario_detalhes/${btoa(usuario.email)}`)
+                    .set({ usuario })
+
             })
             .catch((error: Error) =>{
                 console.log(error)
             })
+    }
+
+    autenticar(email: string, senha: string): void {
+        console.log('Email:', email)
+        console.log('Senha:', senha)
+        firebase.auth().signInWithEmailAndPassword(email, senha)
+        .then((resposta: any) => console.log(resposta))
+        .catch((error: Error) => console.log(error))
     }
 }

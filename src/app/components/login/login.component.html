@@ -2,12 +2,13 @@
   <div class="card-body" style="margin-bottom: 0; padding: 35px;">
     <div class="card-title"></div>
     
-    <!-- <form> -->
+    <form [formGroup]="formulario" (ngSubmit)="autenticar()">
       <div class="form-group">
         <input 
           type="email" 
           class="form-control" 
-          placeholder="Telefone, nome de usuário ou email"
+          placeholder=" Nome de usuário ou E-mail"
+          formControlName="email"
         >
       </div>
       <div class="form-group">
@@ -15,10 +16,11 @@
           type="password"
           class="form-control" 
           placeholder="Senha"
+          formControlName="senha"
         >
       </div>
-      <button type="submit" class="btn btn-primary btn-sm btn-block">Entrar</button>
-    <!-- </form> -->
+      <button type="submit" class="btn btn-primary btn-sm btn-block" [disabled]="formulario.invalid">Entrar</button>
+    </form>
     <div class="row">
       <div class="div">
         <hr>
