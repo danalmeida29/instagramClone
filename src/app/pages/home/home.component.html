@@ -1,11 +1,74 @@
-<nav class="navbar fixed-top navbar-light bg-white">
-  <div class="container">
-    <div class="logo"></div>
-    <div class="add-post"></div>
-  </div>  
-</nav>
-
-<br /><br /><br />
 <div class="container">
-  <app-publicacoes></app-publicacoes>   
+  <nav class="navbar fixed-top navbar-light bg-white">
+
+    <div class="contentBar">
+
+      <div class="logo"></div>
+
+      <div class="atalhos">
+
+        <div class="atlBtn">
+          <div class="home">
+            <img src="/assets/IcoHome.png" alt="">
+          </div>
+          <span>Página inical</span>
+        </div>
+
+        <div class="atlBtn">
+          <div class="procurar">
+            <img src="/assets/IcoProcurar.png" alt="">
+          </div>
+          <span>Pesquisa</span>
+        </div>
+
+        <div class="atlBtn">
+          <div class="explore">
+            <img src="/assets/IcoExplore.png" alt="">
+          </div>
+          <span>Explorar</span>
+        </div>
+
+        <div class="atlBtn">
+          <div class="msg">
+            <img src="/assets/IcoChat.png" alt="">
+          </div>
+          <span>Mensagens</span>
+        </div>
+
+        <div class="atlBtn">
+          <div class="notificacao">
+            <img src="/assets/IcoCoracao.png" alt="">
+          </div>
+          <span>Notificações</span>
+        </div>
+
+        <div class="atlBtn">
+          <div class="add-post">
+            <img src="/assets/IcoCriar.png" alt="">
+          </div>
+          <span>Criar</span>
+        </div>
+
+        <div class="atlBtn">
+          <div class="perfil">
+            <img src="https://img.freepik.com/vetores-premium/vetor-de-icone-de-usuario-de-avatar_97886-15021.jpg?w=360" alt="">
+          </div>
+          <span class="textP">Perfil</span>
+        </div>
+        <div class="mais">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+          </svg>
+          <span> Mais</span>
+        </div>
+        <a (click)="sair()" style="margin-left:25px; text-decoration: none; cursor: pointer;">Sair</a>
+      
+      </div>
+    </div>  
+  </nav>
+  
+  <br /><br /><br />
+  <div class="content">
+    <app-publicacoes></app-publicacoes>   
+  </div>
 </div>

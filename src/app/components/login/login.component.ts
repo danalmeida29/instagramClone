@@ -11,8 +11,8 @@ import { Component, OnInit } from '@angular/core';
 export class LoginComponent implements OnInit {
 
   public formulario: FormGroup = new FormGroup({
-    'email': new FormControl(null, Validators.required),
-    'senha': new FormControl(null, Validators.required)
+    'email': new FormControl(null,[Validators.required, Validators.minLength(6)]),
+    'senha': new FormControl(null, [Validators.required, Validators.minLength(8)])
   })
 
   constructor( private autenticacao: Auth) { }

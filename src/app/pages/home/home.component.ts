@@ -1,3 +1,4 @@
+import { Auth } from './../../auth.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private autenticacao: Auth,
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  sair(): void{
+    this.autenticacao.sair()
   }
 
 }
