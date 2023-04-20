@@ -6,4 +6,12 @@ Com base no usuario cadastrado o firebase cria uma criptografia segura, aonde fi
 
 # Tecnologias Utilizadas
 
-Para a criação deste projeto foi utilizado: Firebase (para proteção e segurança de dados) Angular TypeScript Bootstrap HTML5 SCSS
+Para a criação deste projeto foi utilizado: 
+
+- Firebase (para proteção e segurança de dados) 
+- Angular, 
+- TypeScript,
+- Bootstrap,
+- HTML5,
+- SCSS
+
